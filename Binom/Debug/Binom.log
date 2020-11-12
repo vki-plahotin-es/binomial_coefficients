@@ -1,2 +1,6 @@
 ﻿  1.cpp
+<<<<<<< HEAD
   Binom.vcxproj -> C:\Users\herob\Desktop\binomial_coefficients\Debug\Binom.exe
+=======
+  Binom.vcxproj -> F:\Visual Studio\C++\Binom\Debug\Binom.exe
+>>>>>>> dev-kraken

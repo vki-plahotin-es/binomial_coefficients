@@ -21,6 +21,7 @@ void factorial_method(int n) {
 		result = factorial_calc(n) / (factorial_calc(k) * factorial_calc(n - k));
 		cout << result << ' ';
 	}
+<<<<<<< HEAD
 	cout << endl;
 }
 
@@ -41,9 +42,20 @@ void pascal_method(int n) {
 int main() {
 	int n;
 	cin >> n;
+=======
+}
+
+int main() {
+	int n, k{0};
+	cin >> n;
+	int p = n;
+>>>>>>> dev-kraken
 	for (int k{ 0 }; k <= n; k++)
 		cout << recursion_method(n, k) << ' ';
 	cout << endl;
 	factorial_method(n);
+<<<<<<< HEAD
 	pascal_method(n);
+=======
+>>>>>>> dev-kraken
 }
