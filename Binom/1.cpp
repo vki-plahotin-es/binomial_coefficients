@@ -21,14 +21,29 @@ void factorial_method(int n) {
 		result = factorial_calc(n) / (factorial_calc(k) * factorial_calc(n - k));
 		cout << result << ' ';
 	}
+	cout << endl;
+}
+
+void pascal_method(int n) {
+	int size = n / 2 + 1;
+	int* array{ new int[size] {1, 1} };
+	for (int j{ 1 }; j < n; j++) {
+		for (int i{ size - 1 }; i > 0; i--) {
+			array[i] += array[i - 1];
+		}
+	}
+	for (int i{ 0 }; i < size; i++)
+		cout << array[i] << ' ';
+	for (int i{ size - 2 + n % 2 }; i >= 0; i--)
+		cout << array[i] << ' ';
 }
 
 int main() {
-	int n, k{0};
+	int n;
 	cin >> n;
-	int p = n;
 	for (int k{ 0 }; k <= n; k++)
 		cout << recursion_method(n, k) << ' ';
 	cout << endl;
 	factorial_method(n);
+	pascal_method(n);
 }
